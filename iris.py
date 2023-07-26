@@ -127,14 +127,27 @@ plt.xlabel('Species')
 plt.ylabel('Sepal Width')
 plt.show()
 
-# setosa species has stronger correlations to other variables in the dataset
+########################################################################
+######### NOTES ON THE DATASET/ POSSIBLE MODELLING ISSUES ##############
+########################################################################
+
+# setosa species has some strong correlations in the dataset
 # the species tends to be characterised by a significantly smaller petal width,
 # a slightly small sepal length and a larger sepal width
 
+# virginica tends to have larger petal width and sepal length
+# as characterised by correlations and mean values
+
+# versicolour seems to be less correlated with variables in the dataset
+# thus making the species harder to characterise
+# this might make it harder for the machine learning model to predict values
+# for this category of species
+
 # for a model predicting species of a an IRIS
 # TARGET VARIABLE: Species
-# APPROPRIATE FEATURES: Sepal width, sepal length, petal width
+# APPROPRIATE FEATURES: Sepal width, sepal length, petal width, petal length
 
-#for a model predicing
-
+# Note: when predicting categorical variables, each variable must be assigned a number.
+# in this case since there would be 3 categories each category of species would be assigned
+# a number from 0 - setosa , 1 - versicolour, 2 - virginica
 
