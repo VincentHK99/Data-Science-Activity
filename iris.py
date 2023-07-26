@@ -8,12 +8,19 @@ import numpy as np
 #loading in through seaborn (double checked that data is the same)
 iris = sns.load_dataset('iris')
 
+# check for missing values in the dataset.
+#if data is missing may have to impute or 
+# drop variables from dataset
+iris.isna().sum()
+
 # below is a code from a package I am currently working on. 
 # the package utilizes networkx to give the user a quick and 
 # easy way to visualise relationships between variables in a dataset.
 # It should help the user easily identify which variables are suitable
 # for use in a machine learning model
 
+# species variable must be converted into dummy varibles in order to be read 
+# into a machine learning model
 iris_dummies = pd.get_dummies(iris)
 
 corr_dict = dict(iris_dummies.corr())
@@ -123,5 +130,11 @@ plt.show()
 # setosa species has stronger correlations to other variables in the dataset
 # the species tends to be characterised by a significantly smaller petal width,
 # a slightly small sepal length and a larger sepal width
+
+# for a model predicting species of a an IRIS
+# TARGET VARIABLE: Species
+# APPROPRIATE FEATURES: Sepal width, sepal length, petal width
+
+#for a model predicing
 
 
